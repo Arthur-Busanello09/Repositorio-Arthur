@@ -1,33 +1,42 @@
-Strata by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# 🕹️ Portfólio Full Stack | Arthur Busanello
 
+> "Leveling up solutions."
 
-A simple, minimalist template that actually began life as an unused redesign of my
-personal site. Includes a (configurable) parallax background effect, Poptrox-powered
-lightbox gallery, a bunch of pre-styled elements, and Sass sources for the Sass-inclined.
+Bem-vindo ao repositório do meu site pessoal. Este projeto é um **Portfólio Gamificado** desenvolvido para apresentar meus serviços como Desenvolvedor Full Stack e Analista de Dados.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+O objetivo foi criar uma experiência de usuário imersiva (UX), inspirada em interfaces de jogos (HUDs) e estética Cyberpunk, mantendo a performance e a acessibilidade de um site profissional.
 
-(* = Not included)
+![Preview do Portfólio](thumbs/web-thumb.jpg)
 
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
+## 🚀 Tecnologias Utilizadas
 
-AJ
-aj@lkn.io | @ajlkn
+O projeto foi construído utilizando tecnologias nativas para garantir máxima performance e leveza:
 
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+* **HTML5 Semântico:** Estrutura organizada e otimizada para SEO.
+* **CSS3 Moderno:**
+    * *CSS Variables* para fácil manutenção de temas.
+    * *Flexbox & Grid* para layout responsivo.
+    * *Animations* para barras de progresso e efeitos hover.
+    * *Clip-path* para o design angular/futurista.
+* **JavaScript (Vanilla):**
+    * Sistema de **Abas (Tabs)** para navegação rápida (SPA feel).
+    * Sistema de **Internacionalização (i18n)** para troca instantânea entre PT-BR e EN-US.
+* **FontAwesome:** Ícones vetoriais.
 
+## ✨ Funcionalidades do Sistema (Features)
 
-Credits:
+- [x] **Interface Gamificada:** Design inspirado em RPGs e Cyberpunk.
+- [x] **Multi-Idioma:** Suporte completo a Português e Inglês com troca em tempo real.
+- [x] **Responsividade:** Layout fluido que se adapta de monitores 4k a smartphones (Mobile First).
+- [x] **Navegação SPA:** Alternância entre telas "Home" e "Sobre Mim" sem recarregamento da página.
+- [x] **Showcase de Projetos:** Cards interativos com links diretos para repositórios e demos.
 
-	Demo Images:
-		Unsplash (unsplash.com)
+## 🔗 Links Úteis
 
-	Icons:
-		Font Awesome (fontawesome.io)
+* **Portfólio Online:** [https://arthur-busanello09.github.io/Repositorio-Arthur](https://arthur-busanello09.github.io/Repositorio-Arthur)
+* **LinkedIn:** [Seu LinkedIn Aqui]
+* **Contato:** [Seu Email ou WhatsApp]
 
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+---
+*Desenvolvido por Arthur Busanello © 2026*
+*Template base: HTML5 UP (Strata) - Altamente modificado.*

@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur Busanello | Soluções Digitais</title>
+    <title>Arthur Busanello | Data & Software Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* --- ESTILO BASE (Mantido) --- */
         :root {
             --bg-dark: #0a0a0a;
             --panel-bg: #141414;
@@ -25,14 +24,12 @@
             font-family: 'Poppins', sans-serif;
             background-image: linear-gradient(rgba(255, 102, 0, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 102, 0, 0.03) 1px, transparent 1px);
             background-size: 30px 30px;
-            overflow-x: hidden; /* Evita rolagem lateral na troca de tela */
+            overflow-x: hidden;
         }
 
-        /* Tipografia */
         h1, h2, h3, .hud-text, .btn-quest, .lang-btn, .nav-btn { font-family: 'Orbitron', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
         .neon-text { color: var(--primary); text-shadow: 0 0 10px var(--primary-glow); }
 
-        /* --- CONTAINER HUD --- */
         .main-container {
             max-width: 1100px; margin: 2rem auto; padding: 2rem;
             border: var(--hud-border);
@@ -42,12 +39,11 @@
             position: relative;
             min-height: 80vh;
         }
-        /* Cantos decorativos */
         .main-container::before, .main-container::after { content: ''; position: absolute; width: 20px; height: 20px; border: var(--hud-border); }
         .main-container::before { top: -2px; left: -2px; border-right: none; border-bottom: none; }
         .main-container::after { bottom: -2px; right: -2px; border-left: none; border-top: none; }
 
-        /* --- MENU SUPERIOR (NAVBAR & LANGUAGE) --- */
+        /* --- MENU SUPERIOR --- */
         .top-bar {
             display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 30px;
@@ -69,11 +65,11 @@
         .lang-switch .lang-btn.active { color: var(--primary); text-shadow: 0 0 8px var(--primary); }
         .hidden { display: none !important; }
 
-        /* --- TELA: HOME (Estilos Anteriores) --- */
+        /* --- TELA: HOME --- */
         .player-profile { display: flex; gap: 2rem; align-items: center; margin-bottom: 4rem; flex-wrap: wrap; justify-content: center; }
         .avatar { width: 220px; height: 220px; background: #333; border: 3px solid var(--primary); clip-path: circle(50% at 50% 50%); }
         .avatar img { width: 100%; height: 100%; object-fit: cover; }
-        .player-stats { max-width: 600px; }
+        .player-stats { max-width: 650px; }
         .player-stats h1 { font-size: 2.5rem; margin-bottom: 0.5rem; line-height: 1.2; }
         .tagline { color: var(--primary); font-size: 1.1rem; margin-bottom: 1rem; display: block; font-weight: bold; }
         
@@ -85,46 +81,42 @@
         }
         .service-card:hover, .quest-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
         
-        /* --- UPGRADE: IMAGENS NOS PROJETOS --- */
-/* --- CORREÇÃO DE TAMANHO DA IMAGEM (Proporção 16:9) --- */
-.quest-thumb {
-    width: 100%;
-    height: 250px; /* Altura fixa e maior para garantir nitidez */
-    background-color: #1a1a1a; /* Fundo sutil para preencher espaços laterais */
-    border-bottom: 1px solid #333;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center; /* Centraliza a imagem horizontalmente */
-    align-items: center; /* Centraliza a imagem verticalmente */
-}
+        .quest-thumb {
+            width: 100%;
+            height: 250px; 
+            background-color: #1a1a1a; 
+            border-bottom: 1px solid #333;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+        }
 
-.quest-thumb img {
-    height: 100%; /* A imagem preenche a altura do contêiner */
-    width: auto; /* A largura se ajusta automaticamente, mantendo a proporção */
-    object-fit: contain; /* Garante que a imagem inteira seja visível sem cortes ou distorção */
-    transition: 0.5s;
-    opacity: 1; /* Opacidade total para máxima nitidez */
-}
+        .quest-thumb img {
+            height: 100%; 
+            width: auto; 
+            object-fit: contain; 
+            transition: 0.5s;
+            opacity: 1; 
+        }
 
-/* Efeito ao passar o mouse: a imagem aumenta levemente */
-.quest-card:hover .quest-thumb img {
-    transform: scale(1.05);
-}
+        .quest-card:hover .quest-thumb img {
+            transform: scale(1.05);
+        }
 
-/* Pequena etiqueta sobre a imagem (Ex: "JAVA") */
-.quest-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: var(--primary);
-    color: #000;
-    font-size: 0.7rem;
-    padding: 2px 8px;
-    font-weight: bold;
-    font-family: 'Orbitron';
-    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
-}
+        .quest-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--primary);
+            color: #000;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            font-weight: bold;
+            font-family: 'Orbitron';
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+        }
         .service-icon { font-size: 2rem; color: var(--primary); margin-bottom: 1rem; }
         .service-title, .quest-title { font-size: 1.2rem; margin-bottom: 0.5rem; color: #fff; font-family: 'Orbitron'; }
         .service-desc, .quest-desc { font-size: 0.9rem; color: #aaa; margin-bottom: 1.5rem; line-height: 1.5; }
@@ -139,12 +131,12 @@
         }
         .btn-action:hover { transform: scale(1.05); box-shadow: 0 0 15px var(--primary); }
 
-        /* --- TELA: SOBRE MIM (NOVO) --- */
+        /* --- SOBRE MIM --- */
         .about-content { display: flex; gap: 3rem; align-items: flex-start; flex-wrap: wrap; }
         .about-text { flex: 1; min-width: 300px; }
         .about-text p { margin-bottom: 1.5rem; color: #ccc; line-height: 1.6; }
         
-        /* Linha do Tempo Simplificada */
+        /* Linha do Tempo */
         .timeline { border-left: 2px solid #333; padding-left: 2rem; margin-top: 2rem; }
         .timeline-item { position: relative; margin-bottom: 2rem; }
         .timeline-item::before {
@@ -195,17 +187,19 @@
     <div id="screen-home">
         <section class="player-profile">
             <div class="avatar">
-                <img src="thumbs/perfil2.jpg" alt="Foto Arthur">
+                <img src="thumbs/perfil1.jpeg" alt="Foto Arthur">
             </div>
             <div class="player-stats">
-                <span class="tagline">FULL STACK DEVELOPER</span>
+                <span class="tagline lang-pt">ANALISTA DE DADOS & DESENVOLVEDOR</span>
+                <span class="tagline lang-en hidden">DATA ANALYST & SOFTWARE DEVELOPER</span>
+                
                 <h1>Arthur <span class="neon-text">Busanello</span></h1>
                 
                 <p class="lang-pt" style="color: #ccc; font-size: 1.1rem;">
-                    Transformo ideias complexas em <strong>Sites</strong>, <strong>Sistemas</strong> e <strong>Soluções de Dados</strong> que funcionam.
+                    Transformo dados complexos em <strong>relatórios analíticos</strong> e sistemas automatizados de alto impacto para direcionar decisões de negócios. Especialista em <strong>Tableau</strong>, Integração de Dados <strong>(Pentaho)</strong>, e automação com <strong>Power Automate</strong>.
                 </p>
                 <p class="lang-en hidden" style="color: #ccc; font-size: 1.1rem;">
-                    I turn complex ideas into <strong>Websites</strong>, <strong>Systems</strong>, and <strong>Data Solutions</strong> that work.
+                    I transform complex data into automated, high-impact <strong>analytical reports</strong> to drive business decisions. Specialized in Business Intelligence <strong>(Tableau)</strong>, Data Integration <strong>(Pentaho)</strong>, and enterprise process automation using <strong>Power Automate</strong>.
                 </p>
                 
                 <div style="margin-top: 20px;">
@@ -229,18 +223,24 @@
                     <i class="fa-solid fa-server service-icon"></i>
                     <h3 class="service-title lang-pt">Sistemas de Gestão</h3>
                     <h3 class="service-title lang-en hidden">Management Systems</h3>
-                    <p class="service-desc lang-pt">Criação de programas para gerenciar sua empresa (estoque, financeiro). Seguro e rápido.</p>
-                    <p class="service-desc lang-en hidden">Creation of software to manage your business (inventory, finance). Secure and fast.</p>
+                    <p class="service-desc lang-pt">Criação de APIs em Java, Python para gerenciar sua empresa (estoque, financeiro). Seguro e escalável.</p>
+                    <p class="service-desc lang-en hidden">Creation of Java, Python APIs to manage your business (inventory, finance). Secure and scalable.</p>
                     <div class="tech-tags"><span class="tech-badge">JAVA</span><span class="tech-badge">SPRING</span></div>
                 </div>
 
                 <div class="service-card">
                     <i class="fa-solid fa-chart-line service-icon"></i>
-                    <h3 class="service-title lang-pt">Automação & Dados</h3>
-                    <h3 class="service-title lang-en hidden">Automation & Data</h3>
-                    <p class="service-desc lang-pt">Robôs que coletam preços e geram relatórios automáticos de excel.</p>
-                    <p class="service-desc lang-en hidden">Bots that collect prices and generate automatic excel reports.</p>
-                    <div class="tech-tags"><span class="tech-badge">PYTHON</span><span class="tech-badge">DADOS</span></div>
+                    <h3 class="service-title lang-pt">Data & Automação M365</h3>
+                    <h3 class="service-title lang-en hidden">Data & M365 Automation</h3>
+                    <p class="service-desc lang-pt">Pipelines de ETL com Pentaho, Apache hop e criação de relatórios analíticos interativos usando Tableau e Power BI.</p>
+                    <p class="service-desc lang-en hidden">ETL pipelines with Pentaho, Apache hop and the creation of interactive analytical reports using Tableau and Power BI.</p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">TABLEAU</span>
+                        <span class="tech-badge">PENTAHO</span>
+                        <span class="tech-badge">Apache hop</span>
+                        <span class="tech-badge">Metabase</span>
+                        <span class="tech-badge">POWER AUTOMATE</span>
+                    </div>
                 </div>
 
                 <div class="service-card">
@@ -249,7 +249,7 @@
                     <h3 class="service-title lang-en hidden">Websites</h3>
                     <p class="service-desc lang-pt">Sites modernos e portfólios que funcionam perfeitamente no celular.</p>
                     <p class="service-desc lang-en hidden">Modern websites and portfolios that work perfectly on mobile.</p>
-                    <div class="tech-tags"><span class="tech-badge">WEB</span><span class="tech-badge">HTML/CSS</span></div>
+                    <div class="tech-tags"><span class="tech-badge">WEB</span><span class="tech-badge">HTML/CSS</span><span class="tech-badge">JavaScript/TypeScript</span></div>
                 </div>
             </div>
         </section>
@@ -342,15 +342,15 @@
         <div class="about-content">
             <div class="about-text">
                 <div class="lang-pt">
-                    <p>Olá! Sou formado em <strong>Engenharia de Software</strong> e atuo como desenvolvedor Full Stack. Minha jornada começou com uma paixão por hardware (montagem de PCs gamers) e evoluiu para a criação de sistemas complexos.</p>
-                    <p>Moro em <strong>Foz do Iguaçu, Brasil</strong>. Tenho um perfil analítico forte, moldado pela minha experiência com Business Intelligence, mas também adoro colocar a mão na massa para construir interfaces web.</p>
-                    <p>Hoje, ajudo empresas e clientes a automatizarem processos chatos com Python e a organizarem suas operações com sistemas Java robustos.</p>
+                    <p>Olá! Sou formado em <strong>Engenharia de Software</strong> e atuo como Desenvolvedor Full Stack e Analista de Dados.</p>
+                    <p>Moro em <strong>Foz do Iguaçu, Brasil</strong>. Tenho um perfil analítico forte, moldado pela minha experiência com Business Intelligence na Itaipu Binacional. Adoro a ponte entre a engenharia de dados (ETL, Pentaho) e a entrega visual para o cliente final (Tableau, Web).</p>
+                    <p>Hoje, ajudo empresas a otimizarem operações através de relatórios analíticos dinâmicos, integração com o ecossistema Microsoft 365 e sistemas Java robustos.</p>
                 </div>
 
                 <div class="lang-en hidden">
-                    <p>Hello! I hold a degree in <strong>Software Engineering</strong> and work as a Full Stack developer. My journey started with a passion for hardware (building gaming PCs) and evolved into creating complex software systems.</p>
-                    <p>I am based in <strong>Foz do Iguaçu, Brazil</strong>. I have a strong analytical profile, shaped by my experience with Business Intelligence, but I also love getting hands-on to build web interfaces.</p>
-                    <p>Today, I help companies and clients automate boring processes with Python and organize their operations with robust Java systems.</p>
+                    <p>Hello! I hold a degree in <strong>Software Engineering</strong> and work as a Full Stack Developer and Data Analyst.</p>
+                    <p>I am based in <strong>Foz do Iguaçu, Brazil</strong>. I have a strong analytical profile, shaped by my experience with Business Intelligence at Itaipu Binacional. I love bridging the gap between data engineering (ETL, Pentaho) and the final visual delivery to the client (Tableau, Web).</p>
+                    <p>Today, I help companies optimize operations through dynamic analytical reports, integration with the Microsoft 365 ecosystem, and robust Java systems.</p>
                 </div>
 
                 <div class="timeline">
@@ -362,11 +362,18 @@
                         <span class="t-desc lang-en hidden">Internship in Data Analysis & BI.</span>
                     </div>
                     <div class="timeline-item">
+                        <span class="t-date">2024</span>
+                        <h4 class="t-title lang-pt">Analise e Desenvolvimento de Sistemas</h4>
+                        <h4 class="t-title lang-en hidden">Systems Analysis and Development</h4>
+                        <span class="t-desc lang-pt">Tecnólogo (Ensino Superior) Completo.</span>
+                        <span class="t-desc lang-en hidden">Associate's Degree Completed.</span>
+                    </div>
+                    <div class="timeline-item">
                         <span class="t-date">2025 - 2026</span>
-                        <h4 class="t-title lang-pt">Freelancer Full Stack</h4>
-                        <h4 class="t-title lang-en hidden">Full Stack Freelancer</h4>
-                        <span class="t-desc lang-pt">Desenvolvimento de APIs Java e Automação Python.</span>
-                        <span class="t-desc lang-en hidden">Java API Development and Python Automation.</span>
+                        <h4 class="t-title lang-pt">Freelancer: Dados & Web</h4>
+                        <h4 class="t-title lang-en hidden">Freelancer: Data & Web</h4>
+                        <span class="t-desc lang-pt">Desenvolvimento de APIs Java, relatórios analíticos e Automação.</span>
+                        <span class="t-desc lang-en hidden">Java API Development, analytical reports, and Automation.</span>
                     </div>
                     <div class="timeline-item">
                         <span class="t-date">2026</span>
@@ -387,7 +394,7 @@
             </div>
             
             <div class="avatar" style="border-radius: 20px; clip-path: none; width: 300px; height: 350px;">
-                <img src="thumbs/perfil2.jpg" alt="Arthur">
+                <img src="thumbs/perfil1.jpeg" alt="Arthur">
             </div>
         </div>
     </div>
@@ -400,7 +407,7 @@
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/arthur-henrique-36b998369/" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/Arthur-Busanello09" class="s-icon"><i class="fa-brands fa-github"></i></a>
-            <a href="https://wa.me/5545999625792" class="s-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://wa.link/12rhgd" class="s-icon"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
         <p style="margin-top: 2rem; color: #555; font-size: 0.8rem;">&copy; 2026 Arthur Busanello</p>
     </footer>
@@ -408,32 +415,26 @@
 </div>
 
 <script>
-    // 1. Função para trocar de Tela (Home vs Sobre Mim)
+    // 1. Função para trocar de Tela
     function switchScreen(screenName) {
-        // Esconde tudo
         document.getElementById('screen-home').classList.add('hidden');
         document.getElementById('screen-about').classList.add('hidden');
         
-        // Remove 'active' dos botões do menu
         document.getElementById('nav-home').classList.remove('active');
         document.getElementById('nav-about').classList.remove('active');
 
-        // Mostra a tela certa
         document.getElementById('screen-' + screenName).classList.remove('hidden');
         document.getElementById('nav-' + screenName).classList.add('active');
 
-        // Volta ao topo
         window.scrollTo(0, 0);
     }
 
-    // 2. Função de Idioma (Mantida)
+    // 2. Função de Idioma 
     function setLanguage(lang) {
         document.querySelectorAll('.lang-pt').forEach(el => el.classList.add('hidden'));
         document.querySelectorAll('.lang-en').forEach(el => el.classList.add('hidden'));
         
         // Mostra apenas o idioma escolhido
-        // Obs: Precisamos garantir que não mostre coisas de telas ocultas.
-        // O CSS já cuida disso, pois a tela pai tem display:none.
         document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.remove('hidden'));
 
         document.getElementById('btn-pt').classList.remove('active');
